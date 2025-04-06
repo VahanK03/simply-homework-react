@@ -1,0 +1,15 @@
+.card-table-easy{
+    position: absolute;
+    top: 20%; 
+    left: 32%; 
+}
+
+.card-table-body-easy {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    grid-template-rows: repeat(4, auto); 
+    gap: 10px; 
+    column-gap: 30px;
+    justify-items: center; 
+    align-items: center; 
+}

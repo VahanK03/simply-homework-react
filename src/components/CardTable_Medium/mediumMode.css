@@ -1,0 +1,14 @@
+.card-table-medium{
+    position: absolute;
+    top: 20%; 
+    left: 25%; 
+}
+
+.card-table-body-medium {
+    display: grid;
+    grid-template-columns: repeat(6, auto);
+    grid-template-rows: repeat(6, auto);
+    gap: 10px;
+    justify-items: center;
+    align-items: center; 
+}
