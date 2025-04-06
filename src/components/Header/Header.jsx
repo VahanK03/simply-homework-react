@@ -53,10 +53,7 @@ const Header = () => {
     setStart(false); 
   };
 
-  // const calculateAccuracy = () => {
-  //   if (attempts === 0) return 0;
-  //   return ((matchedCards  * 2 / (attempts * 2)) * 100).toFixed(2); 
-  // };
+
   const calculateAccuracy = () => {
     if (attempts === 0) return 0;
     const timeFactor = time > 0 ? time / (mode === "easy" ? 120 : mode === "medium" ? 180 : 240) : 0;
@@ -121,7 +118,15 @@ const Header = () => {
         <div className="game-over-container">
           <h1 className="game-over">Game Over</h1>
           <h2 className="you-louse">You loose</h2>
-          <h2 className="try-again">Try again!</h2>
+          <button
+            className="play-again"
+            onClick={() => {
+              setGameOver(false);
+              handleStart();
+            }}
+          >
+            Play Again
+          </button>
         </div>
       )}
 
@@ -134,6 +139,15 @@ const Header = () => {
           </p>
           <p>Attempts: {attempts}</p>
           <p>Accuracy: {calculateAccuracy()}%</p>
+          <button
+            className="play-again"
+            onClick={() => {
+              setGameWon(false);
+              handleStart();
+            }}
+          >
+            Play Again
+          </button>
         </div>
       )}
       <img
